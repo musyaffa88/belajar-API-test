@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "mocha main.js"
+  },
+  "dependencies": {
+    "@reportportal/agent-js-mocha": "^5.0.3",
+    "chai": "^4.3.8",
+    "chai-json-schema": "^1.5.1",
+    "chai-json-schema-ajv": "^5.2.4",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "@types/chai-json-schema": "^1.4.7"
+  }
+}
