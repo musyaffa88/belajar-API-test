@@ -51,10 +51,8 @@ it('Test Add a Todo', async function () {
         userId: 5,
     }
 	const res =  await request.post('/todos/add').send(payload)
+	expect(res.body).to.deep.include(payload)
     expect(res.statusCode).to.equal(200)
-    expect(res.body.todo).to.equal(payload.todo)
-    expect(res.body.completed).to.equal(payload.completed)
-    expect(res.body.userId).to.equal(payload.userId)
 	expect(res.body).have.jsonSchema(todosSchema)
 })
 
