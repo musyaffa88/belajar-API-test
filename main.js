@@ -33,19 +33,13 @@ const todoSchema = {
 	},
 	required: ['id', 'todo', 'userId']
 }
-// it('test json schema array', async function () {
-// 	const res = await request.get('/todos')
-// 	expect(res.body).have.jsonSchema(todosSchema)
-// })
-
-// it('test json schema object', async function () {
-// 	const res = await request.get('/todos/1')
-// 	expect(res.body).have.jsonSchema(todoSchema)
-// })
-
-async function main() {
-	const res = await request.get('/todos/1')
+it('test json schema array', async function () {
+	const res = await request.get('/todos')
 	expect(res.body).have.jsonSchema(todosSchema)
-}
+})
 
-main()
+it('test json schema object', async function () {
+	const res = await request.get('/todos/1')
+	expect(res.body).have.jsonSchema(todoSchema)
+})
+
